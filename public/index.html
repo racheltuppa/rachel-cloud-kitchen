@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachel Cloud Kitchen | Fresh to Your Door</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Rachel Cloud Kitchen 🍳</div>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Gourmet Meals. Delivered Fast.</h1>
+        <p>Experience restaurant-quality food from the comfort of your couch.</p>
+        <a href="#menu" class="btn">Order Now</a>
+    </header>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Signature Menu</h2>
+        <div class="menu-grid" id="menu-grid">
+            </div>
+    </section>
+
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+            <h2>Your Order</h2>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+                <strong>Total: $<span id="cart-total">0.00</span></strong>
+            </div>
+            <input type="text" id="customer-name" placeholder="Your Name" required>
+            <button class="btn checkout-btn" onclick="checkout()">Place Order</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Rachel Cloud Kitchen. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
